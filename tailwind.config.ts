@@ -11,8 +11,8 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['"Luckiest Guy"', 'cursive'],
-        code: ['monospace'],
+        headline: ['"Roboto Mono"', 'monospace'],
+        code: ['"Roboto Mono"', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',

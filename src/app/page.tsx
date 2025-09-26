@@ -79,13 +79,13 @@ export default function Home() {
       <section id="bio" className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">
         <Avatar className="h-32 w-32 border-4 border-primary">
           {profileImage && <AvatarImage src={profileImage.imageUrl} alt="Foto de Perfil" data-ai-hint={profileImage.imageHint} />}
-          <AvatarFallback>HS</AvatarFallback>
+          <AvatarFallback>AS</AvatarFallback>
         </Avatar>
         <div className="space-y-2">
-          <h1 className="font-headline text-4xl font-bold tracking-tight">Homer Simpson</h1>
-          <p className="text-xl text-muted-foreground">Inspetor de Segurança Nuclear & Pai de Família</p>
+          <h1 className="font-headline text-4xl font-bold tracking-tight">Alexandre 'Alex' Silva</h1>
+          <p className="text-xl text-muted-foreground">Desenvolvedor Full-Stack Sênior</p>
           <p className="max-w-2xl">
-            Apaixonado por rosquinhas, cerveja Duff e passar tempo com a família. Especialista em evitar o trabalho e tirar uma soneca na Usina Nuclear de Springfield.
+            Apaixonado por criar soluções elegantes e eficientes para problemas complexos. Especialista em JavaScript, com vasta experiência no ecossistema de React e Node.js.
           </p>
         </div>
       </section>

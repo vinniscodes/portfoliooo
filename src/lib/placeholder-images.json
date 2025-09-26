@@ -2,27 +2,27 @@
   "placeholderImages": [
     {
       "id": "profile",
-      "description": "A portrait of Homer Simpson.",
-      "imageUrl": "https://images.unsplash.com/photo-1635805737451-8669e5d416b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob21lciUyMHNpbXBzb258ZW58MHx8fHwxNzU5MTE5MDUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "homer simpson"
+      "description": "A placeholder for a profile picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1570215171323-4ec328f3f5fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBkZXZlbG9wZXJ8ZW58MHx8fHwxNzU4NzgxMjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person developer"
     },
     {
       "id": "project1",
-      "description": "Homer Simpson backing into a bush.",
-      "imageUrl": "https://images.unsplash.com/photo-1596152206972-524d46e0b22b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxob21lciUyMGJ1c2h8ZW58MHx8fHwxNzU4ODU0Njc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "homer bush"
+      "description": "A placeholder image for a project.",
+      "imageUrl": "https://images.unsplash.com/photo-1730130054404-c2bd8e7038c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVjaCUyMGNvZGV8ZW58MHx8fHwxNzU4ODU0Nzk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech code"
     },
     {
       "id": "project2",
-      "description": "Bart Simpson writing on a chalkboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1591137108029-1eb3a6a3c83c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGFsa2JvYXJkJTIwZ2Fnc3xlbnwwfHx8fDE3NTg4NTQ2Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chalkboard gags"
+      "description": "A placeholder image for a project.",
+      "imageUrl": "https://images.unsplash.com/photo-1545987796-200677ee1011?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc1ODgwNjEyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data analytics"
     },
     {
       "id": "project3",
-      "description": "The Springfield Nuclear Power Plant.",
-      "imageUrl": "https://images.unsplash.com/photo-1591200834528-4050ce99fe78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxudWNsZWFyJTIwcGxhbnR8ZW58MHx8fHwxNzU4ODU0Njc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nuclear plant"
+      "description": "A placeholder image for a project.",
+      "imageUrl": "https://images.unsplash.com/photo-1514575110897-1253ff7b2ccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzU4ODAzMzIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
     },
     {
       "id": "donut",
