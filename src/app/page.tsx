@@ -78,14 +78,14 @@ export default function Home() {
     <div className="container mx-auto max-w-5xl space-y-12 p-4 py-8 md:px-6 md:py-12">
       <section id="bio" className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">
         <Avatar className="h-32 w-32 border-4 border-primary">
-          {profileImage && <AvatarImage src={profileImage.imageUrl} alt="Foto de Perfil" />}
-          <AvatarFallback>JD</AvatarFallback>
+          {profileImage && <AvatarImage src={profileImage.imageUrl} alt="Foto de Perfil" data-ai-hint={profileImage.imageHint} />}
+          <AvatarFallback>HS</AvatarFallback>
         </Avatar>
         <div className="space-y-2">
-          <h1 className="font-headline text-4xl font-bold tracking-tight">João Ninguém</h1>
-          <p className="text-xl text-muted-foreground">Desenvolvedor Full-Stack & Entusiasta de UI/UX</p>
+          <h1 className="font-headline text-4xl font-bold tracking-tight">Homer Simpson</h1>
+          <p className="text-xl text-muted-foreground">Inspetor de Segurança Nuclear & Pai de Família</p>
           <p className="max-w-2xl">
-            Apaixonado por criar experiências web bonitas, funcionais e centradas no usuário. Com mais de 5 anos na indústria, sou especialista na stack MERN e adoro dar vida a ideias com código.
+            Apaixonado por rosquinhas, cerveja Duff e passar tempo com a família. Especialista em evitar o trabalho e tirar uma soneca na Usina Nuclear de Springfield.
           </p>
         </div>
       </section>
