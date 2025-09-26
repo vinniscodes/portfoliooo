@@ -76,8 +76,8 @@ export default function HangmanPage() {
   return (
     <div className="container mx-auto flex max-w-4xl flex-col items-center gap-8 p-4 py-8 md:px-6 md:py-12">
       <div className="text-center">
-        <h1 className="font-headline text-4xl font-bold tracking-wider">Decifre o Código</h1>
-        <p className="text-muted-foreground">Adivinhe a palavra secreta antes que o sistema trave!</p>
+        <h1 className="font-headline text-4xl font-bold tracking-wider">Jogo da Forca</h1>
+        <p className="text-muted-foreground">Adivinhe a palavra secreta!</p>
       </div>
 
       <HangmanDrawing numberOfMistakes={incorrectLetters.length} />
@@ -94,15 +94,15 @@ export default function HangmanPage() {
       </div>
 
       <Button onClick={startNewGame} size="lg">
-        Novo Desafio
+        Nova Palavra
       </Button>
 
       <AlertDialog open={gameStatus !== 'playing'}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{gameStatus === 'won' ? 'Compilação bem-sucedida!' : 'Erro 404: Palavra não encontrada!'}</AlertDialogTitle>
+            <AlertDialogTitle>{gameStatus === 'won' ? 'Você venceu!' : 'Você perdeu!'}</AlertDialogTitle>
             <AlertDialogDescription>
-              {gameStatus === 'lost' && 'Falha na decodificação. '}A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
+              {gameStatus === 'lost' && 'Mais sorte na próxima vez! '}A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
