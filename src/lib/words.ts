@@ -14,12 +14,20 @@ const WORDS = [
   "SKINNER",
   "MILHOUSE",
   "APU",
-  "CHELM",
   "COMICHÃO",
+  "COÇADINHA",
   "KWIKEMART",
   "SHELBYVILLE",
   "DOH",
-  "EXCELENTE"
+  "EXCELENTE",
+  "AYCARAMBA",
+  "PATTY",
+  "SELMA",
+  "ABRAHAM",
+  "BARNEY",
+  "WIGGUM",
+  "NELSON",
+  "TAUBERNA"
 ];
 
 export function getRandomWord() {
