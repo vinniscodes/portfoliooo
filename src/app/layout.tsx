@@ -5,8 +5,8 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Curriculum Vitae: Coded Edition',
-  description: 'A personal portfolio and interactive resume built with Next.js.',
+  title: 'Currículo: Edição Codificada',
+  description: 'Um portfólio pessoal e currículo interativo feito com Next.js.',
 };
 
 export default function RootLayout({
@@ -15,11 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Luckiest+Guy&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
         <div className="flex min-h-screen flex-col">

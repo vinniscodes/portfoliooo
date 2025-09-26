@@ -11,12 +11,12 @@ export function Footer() {
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Linkedin className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
           </a>
-          <a href="mailto:example@example.com" aria-label="Email">
+          <a href="mailto:exemplo@exemplo.com" aria-label="Email">
             <Mail className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
           </a>
         </div>
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Curriculum Vitae: Coded Edition. All rights reserved.
+          © {new Date().getFullYear()} Currículo: Edição Codificada. Todos os direitos reservados.
         </p>
       </div>
     </footer>

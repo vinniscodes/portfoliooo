@@ -32,42 +32,42 @@ export default function Home() {
     { name: 'Backend', icon: <Server /> },
     { name: 'Database', icon: <Database /> },
     { name: 'Mobile', icon: <Smartphone /> },
-    { name: 'Version Control', icon: <GitMerge /> },
+    { name: 'Controle de Versão', icon: <GitMerge /> },
   ];
 
   const experience = [
     {
-      role: 'Senior Frontend Developer',
+      role: 'Desenvolvedor Frontend Sênior',
       company: 'Tech Solutions Inc.',
-      period: '2020 - Present',
-      description: 'Led the development of scalable web applications using React and Next.js. Collaborated with cross-functional teams to deliver high-quality products. Mentored junior developers and improved code quality across the team.',
+      period: '2020 - Presente',
+      description: 'Liderei o desenvolvimento de aplicações web escaláveis usando React e Next.js. Colaborei com equipes multifuncionais para entregar produtos de alta qualidade. Orientei desenvolvedores juniores e melhorei a qualidade do código em toda a equipe.',
     },
     {
-      role: 'Software Engineer',
+      role: 'Engenheiro de Software',
       company: 'Innovate Co.',
       period: '2018 - 2020',
-      description: 'Developed and maintained features for a large-scale e-commerce platform. Worked with TypeScript, GraphQL, and Node.js to build robust and efficient solutions.',
+      description: 'Desenvolvi e mantive funcionalidades para uma plataforma de e-commerce de grande escala. Trabalhei com TypeScript, GraphQL e Node.js para construir soluções robustas e eficientes.',
     },
   ];
 
   const projects = [
     {
-      title: 'Project Alpha',
-      description: 'A comprehensive project management tool designed to streamline workflows and enhance team collaboration, built with the latest web technologies.',
+      title: 'Projeto Alpha',
+      description: 'Uma ferramenta completa de gerenciamento de projetos projetada para otimizar fluxos de trabalho e aprimorar a colaboração da equipe, construída com as mais recentes tecnologias da web.',
       image: project1Image,
       link: '#',
       tags: ['React', 'Next.js', 'Tailwind CSS'],
     },
     {
-      title: 'Project Beta',
-      description: 'An interactive data visualization dashboard that provides real-time insights from complex datasets, helping businesses make informed decisions.',
+      title: 'Projeto Beta',
+      description: 'Um painel interativo de visualização de dados que fornece insights em tempo real de conjuntos de dados complexos, ajudando as empresas a tomar decisões informadas.',
       image: project2Image,
       link: '#',
       tags: ['TypeScript', 'D3.js', 'Node.js'],
     },
     {
-      title: 'Project Gamma',
-      description: 'A mobile-first social networking application designed to connect like-minded individuals through shared interests and events.',
+      title: 'Projeto Gamma',
+      description: 'Uma aplicação de rede social focada em dispositivos móveis, projetada para conectar pessoas com interesses semelhantes através de interesses e eventos compartilhados.',
       image: project3Image,
       link: '#',
       tags: ['React Native', 'Firebase', 'GraphQL'],
@@ -78,20 +78,20 @@ export default function Home() {
     <div className="container mx-auto max-w-5xl space-y-12 p-4 py-8 md:px-6 md:py-12">
       <section id="bio" className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">
         <Avatar className="h-32 w-32 border-4 border-primary">
-          {profileImage && <AvatarImage src={profileImage.imageUrl} alt="Profile Picture" />}
+          {profileImage && <AvatarImage src={profileImage.imageUrl} alt="Foto de Perfil" />}
           <AvatarFallback>JD</AvatarFallback>
         </Avatar>
         <div className="space-y-2">
-          <h1 className="font-headline text-4xl font-bold tracking-tight">John Doe</h1>
-          <p className="text-xl text-muted-foreground">Full-Stack Developer & UI/UX Enthusiast</p>
+          <h1 className="font-headline text-4xl font-bold tracking-tight">João Ninguém</h1>
+          <p className="text-xl text-muted-foreground">Desenvolvedor Full-Stack & Entusiasta de UI/UX</p>
           <p className="max-w-2xl">
-            Passionate about crafting beautiful, functional, and user-centric web experiences. With over 5 years in the industry, I specialize in the MERN stack and love bringing ideas to life with code.
+            Apaixonado por criar experiências web bonitas, funcionais e centradas no usuário. Com mais de 5 anos na indústria, sou especialista na stack MERN e adoro dar vida a ideias com código.
           </p>
         </div>
       </section>
 
       <section id="skills" className="space-y-6">
-        <h2 className="font-headline text-3xl font-bold">Skills & Technologies</h2>
+        <h2 className="font-headline text-3xl font-bold">Habilidades & Tecnologias</h2>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
           {skills.map((skill) => (
             <Card key={skill.name} className="flex flex-col items-center justify-center p-6 text-center transition-transform hover:scale-105 hover:shadow-lg">
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       <section id="experience" className="space-y-6">
-        <h2 className="font-headline text-3xl font-bold">Work Experience</h2>
+        <h2 className="font-headline text-3xl font-bold">Experiência Profissional</h2>
         <div className="space-y-6">
           {experience.map((job) => (
             <Card key={job.company}>
@@ -128,7 +128,7 @@ export default function Home() {
       </section>
 
       <section id="projects" className="space-y-6">
-        <h2 className="font-headline text-3xl font-bold">Projects</h2>
+        <h2 className="font-headline text-3xl font-bold">Projetos</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col overflow-hidden">

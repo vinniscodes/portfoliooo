@@ -76,8 +76,8 @@ export default function HangmanPage() {
   return (
     <div className="container mx-auto flex max-w-4xl flex-col items-center gap-8 p-4 py-8 md:px-6 md:py-12">
       <div className="text-center">
-        <h1 className="font-headline text-4xl font-bold">Hangman Game</h1>
-        <p className="text-muted-foreground">Guess the programming-related word!</p>
+        <h1 className="font-headline text-4xl font-bold tracking-wider">Jogo da Forca do Homer</h1>
+        <p className="text-muted-foreground">"D'oh!" Adivinhe a palavra ou... você já sabe!</p>
       </div>
 
       <HangmanDrawing numberOfMistakes={incorrectLetters.length} />
@@ -94,19 +94,19 @@ export default function HangmanPage() {
       </div>
 
       <Button onClick={startNewGame} size="lg">
-        New Game
+        Rosquinha... digo, Novo Jogo
       </Button>
 
       <AlertDialog open={gameStatus !== 'playing'}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{gameStatus === 'won' ? 'Congratulations! You won!' : 'Nice try, but you lost.'}</AlertDialogTitle>
+            <AlertDialogTitle>{gameStatus === 'won' ? 'Woo-hoo! Você conseguiu!' : 'D\'oh! Você perdeu!'}</AlertDialogTitle>
             <AlertDialogDescription>
-              The word was: <span className="font-bold text-foreground">{wordToGuess}</span>
+              A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogAction onClick={startNewGame}>Play Again</AlertDialogAction>
+            <AlertDialogAction onClick={startNewGame}>Jogar de Novo</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
