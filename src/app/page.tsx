@@ -58,7 +58,7 @@ export default function Home() {
     <div className="flex animate-fade-in flex-col">
       <section id="hero" className="container mx-auto flex min-h-screen flex-col items-center justify-center gap-4 text-center">
         <Avatar className="h-32 w-32">
-          <AvatarImage src="https://picsum.photos/seed/vini/200/200" alt="Vinicius Anderson" data-ai-hint="man portrait" />
+          <AvatarImage src="https://picsum.photos/seed/vini/200/200" alt="Vinicius Anderson" />
           <AvatarFallback>VA</AvatarFallback>
         </Avatar>
         <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">Olá, eu sou Vinicius Anderson</h1>
