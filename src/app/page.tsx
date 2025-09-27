@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -61,7 +62,7 @@ export default function Home() {
           <AvatarFallback>VA</AvatarFallback>
         </Avatar>
         <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">Olá, eu sou Vinicius Anderson</h1>
-        <p className="text-lg text-primary sm:text-xl">Desenvolvedor Web | Apaixonado por Tecnologia</p>
+        <p className="text-lg text-primary sm:text-xl">DEV FULLSTACK</p>
         <div className="mt-4 flex gap-4">
           <Button asChild size="lg">
             <a href="#contato">Entre em Contato</a>
@@ -108,7 +109,7 @@ export default function Home() {
       <section id="sobre" className="container mx-auto py-20 text-center">
         <h2 className="text-3xl font-bold text-primary">Sobre Mim</h2>
         <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-          Sou um desenvolvedor web apaixonado por criar soluções inovadoras e eficientes. Com um forte foco em tecnologias modernas como React e Next.js, busco constantemente aprender e aplicar as melhores práticas para construir aplicações robustas e escaláveis. Adoro transformar ideias em código e enfrentar desafios complexos.
+          Cursando Ciência da Computação na UNICAP. Estudante com foco em IA e desenvolvimento de software. Aprendendo e construindo com Python, Java e JS.
         </p>
       </section>
 
