@@ -1,5 +1,6 @@
 const HEAD = (
   <div
+    key="head"
     style={{
       textShadow: '0 0 10px hsl(var(--primary))',
     }}
@@ -9,6 +10,7 @@ const HEAD = (
 
 const BODY = (
   <div
+    key="body"
     style={{
       boxShadow: '0 0 10px hsl(var(--primary))',
     }}
@@ -18,6 +20,7 @@ const BODY = (
 
 const RIGHT_ARM = (
   <div
+    key="right-arm"
     style={{
       boxShadow: '0 0 10px hsl(var(--primary))',
     }}
@@ -27,6 +30,7 @@ const RIGHT_ARM = (
 
 const LEFT_ARM = (
   <div
+    key="left-arm"
     style={{
       boxShadow: '0 0 10px hsl(var(--primary))',
     }}
@@ -36,6 +40,7 @@ const LEFT_ARM = (
 
 const RIGHT_LEG = (
   <div
+    key="right-leg"
     style={{
       boxShadow: '0 0 10px hsl(var(--primary))',
     }}
@@ -45,6 +50,7 @@ const RIGHT_LEG = (
 
 const LEFT_LEG = (
   <div
+    key="left-leg"
     style={{
       boxShadow: '0 0 10px hsl(var(--primary))',
     }}
