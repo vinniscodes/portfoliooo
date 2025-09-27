@@ -14,7 +14,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
-import { Button } from '@/components/ui/button';
 
 const MAX_MISTAKES = 6;
 
@@ -74,10 +73,10 @@ export default function HangmanPage() {
   }, [addGuessedLetter]);
 
   return (
-    <div className="container mx-auto flex max-w-lg flex-col items-center gap-8 p-4 py-8 md:px-6 md:py-12">
+    <div className="container mx-auto flex max-w-2xl flex-col items-center gap-8 p-4 py-12 font-mono">
       <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-primary">Jogo da Forca</h1>
-        <p className="text-muted-foreground">Adivinhe a palavra secreta de tecnologia!</p>
+        <h1 className="text-4xl font-bold tracking-tight text-primary">TERMINAL DE CRIPTOGRAFIA</h1>
+        <p className="text-muted-foreground">Decifre a palavra-chave para obter acesso.</p>
       </div>
 
       <HangmanDrawing numberOfMistakes={incorrectLetters.length} />
@@ -94,15 +93,15 @@ export default function HangmanPage() {
       </div>
 
       <AlertDialog open={gameStatus !== 'playing'}>
-        <AlertDialogContent>
+        <AlertDialogContent className="font-mono">
           <AlertDialogHeader>
-            <AlertDialogTitle>{gameStatus === 'won' ? 'Parabéns, você venceu!' : 'Fim de Jogo!'}</AlertDialogTitle>
+            <AlertDialogTitle>{gameStatus === 'won' ? '>> ACESSO CONCEDIDO <<' : '>> ACESSO NEGADO <<'}</AlertDialogTitle>
             <AlertDialogDescription>
-              {gameStatus === 'lost' && 'Você errou 6 vezes. '}A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
+              {gameStatus === 'lost' && `Falha na autenticação. Tentativas excedidas. `}A palavra-chave era: <span className="font-bold text-primary">{wordToGuess}</span>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogAction onClick={startNewGame}>Jogar Novamente</AlertDialogAction>
+            <AlertDialogAction onClick={startNewGame}>REINICIAR PROTOCOLO</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
