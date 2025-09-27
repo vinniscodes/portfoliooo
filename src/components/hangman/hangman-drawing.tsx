@@ -1,10 +1,10 @@
 const BODY_PARTS = [
-  <div key="head" style={{ width: '50px', height: '50px', borderRadius: '100%', border: '10px solid currentColor', position: 'absolute', top: '50px', right: '-30px' }} />,
-  <div key="body" style={{ width: '10px', height: '100px', background: 'currentColor', position: 'absolute', top: '100px', right: 0 }} />,
-  <div key="right-arm" style={{ width: '100px', height: '10px', background: 'currentColor', position: 'absolute', top: '120px', right: '-100px', rotate: '-30deg', transformOrigin: 'left bottom' }} />,
-  <div key="left-arm" style={{ width: '100px', height: '10px', background: 'currentColor', position: 'absolute', top: '120px', right: '10px', rotate: '30deg', transformOrigin: 'right bottom' }} />,
-  <div key="right-leg" style={{ width: '100px', height: '10px', background: 'currentColor', position: 'absolute', top: '190px', right: '-90px', rotate: '60deg', transformOrigin: 'left bottom' }} />,
-  <div key="left-leg" style={{ width: '100px', height: '10px', background: 'currentColor', position: 'absolute', top: '190px', right: 0, rotate: '-60deg', transformOrigin: 'right bottom' }} />,
+  <div key="head" className="absolute top-[50px] -right-[30px] h-[50px] w-[50px] rounded-full border-[10px] border-current" />,
+  <div key="body" className="absolute top-[100px] right-0 h-[100px] w-[10px] bg-current" />,
+  <div key="right-arm" className="absolute top-[120px] -right-[100px] h-[10px] w-[100px] origin-bottom-left -rotate-[30deg] bg-current" />,
+  <div key="left-arm" className="absolute top-[120px] right-[10px] h-[10px] w-[100px] origin-bottom-right rotate-[30deg] bg-current" />,
+  <div key="right-leg" className="absolute top-[190px] -right-[90px] h-[10px] w-[100px] origin-bottom-left rotate-[60deg] bg-current" />,
+  <div key="left-leg" className="absolute top-[190px] right-0 h-[10px] w-[100px] origin-bottom-right -rotate-[60deg] bg-current" />,
 ];
 
 type HangmanDrawingProps = {
@@ -13,17 +13,12 @@ type HangmanDrawingProps = {
 
 export function HangmanDrawing({ numberOfMistakes }: HangmanDrawingProps) {
   return (
-    <div className="relative flex h-80 w-64 items-center justify-center">
-      {/* Hangman Figure */}
-      <div className="relative">
-        {BODY_PARTS.slice(0, numberOfMistakes)}
-      </div>
-
-      {/* Gallows */}
-      <div style={{ height: '50px', width: '10px', background: 'currentColor', position: 'absolute', top: 0, right: 0 }} />
-      <div style={{ height: '10px', width: '200px', background: 'currentColor', marginLeft: '120px' }} />
-      <div style={{ height: '300px', width: '10px', background: 'currentColor', marginLeft: '120px' }} />
-      <div style={{ height: '10px', width: '250px', background: 'currentColor' }} />
+    <div className="relative">
+      {BODY_PARTS.slice(0, numberOfMistakes)}
+      <div className="absolute top-0 right-0 h-[50px] w-[10px] bg-current" />
+      <div className="ml-[120px] h-[10px] w-[200px] bg-current" />
+      <div className="ml-[120px] h-[300px] w-[10px] bg-current" />
+      <div className="h-[10px] w-[250px] bg-current" />
     </div>
   );
 }

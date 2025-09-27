@@ -74,17 +74,17 @@ export default function HangmanPage() {
   }, [addGuessedLetter]);
 
   return (
-    <div className="container mx-auto flex max-w-4xl flex-col items-center gap-8 p-4 py-8 md:px-6 md:py-12">
+    <div className="container mx-auto flex max-w-lg flex-col items-center gap-8 p-4 py-8 md:px-6 md:py-12">
       <div className="text-center">
-        <h1 className="font-headline text-4xl font-bold tracking-wider">Jogo da Forca</h1>
-        <p className="text-muted-foreground">Adivinhe a palavra secreta!</p>
+        <h1 className="text-4xl font-bold tracking-tight text-primary">Jogo da Forca</h1>
+        <p className="text-muted-foreground">Adivinhe a palavra secreta de tecnologia!</p>
       </div>
 
       <HangmanDrawing numberOfMistakes={incorrectLetters.length} />
 
       {wordToGuess && <WordDisplay word={wordToGuess} guessedLetters={guessedLetters} reveal={isLoser} />}
 
-      <div className="w-full self-stretch">
+      <div className="w-full self-stretch pt-4">
         <Keyboard
           activeLetters={guessedLetters.filter((letter) => wordToGuess.includes(letter))}
           inactiveLetters={incorrectLetters}
@@ -93,20 +93,16 @@ export default function HangmanPage() {
         />
       </div>
 
-      <Button onClick={startNewGame} size="lg">
-        Nova Palavra
-      </Button>
-
       <AlertDialog open={gameStatus !== 'playing'}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{gameStatus === 'won' ? 'Você venceu!' : 'Você perdeu!'}</AlertDialogTitle>
+            <AlertDialogTitle>{gameStatus === 'won' ? 'Parabéns, você venceu!' : 'Fim de Jogo!'}</AlertDialogTitle>
             <AlertDialogDescription>
-              {gameStatus === 'lost' && 'Mais sorte na próxima vez! '}A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
+              {gameStatus === 'lost' && 'Você errou 6 vezes. '}A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogAction onClick={startNewGame}>Jogar de Novo</AlertDialogAction>
+            <AlertDialogAction onClick={startNewGame}>Jogar Novamente</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

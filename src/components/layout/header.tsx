@@ -1,29 +1,36 @@
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import { Code2 } from 'lucide-react';
 
 export function Header() {
   return (
-    <header className="bg-card shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-          <Code2 className="h-6 w-6 text-primary" />
-          <span className="hidden sm:inline font-headline tracking-wider">Portfólio.dev</span>
-          <span className="sm:hidden font-headline tracking-wider">P.dev</span>
-        </Link>
-        <nav className="flex items-center gap-4 sm:gap-6">
-          <Link
-            href="/"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            Início
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto flex h-14 items-center">
+        <div className="mr-4 flex">
+          <Link href="/" className="mr-6 flex items-center space-x-2">
+            <Code2 className="h-6 w-6 text-primary" />
+            <span className="font-bold">Vinicius Anderson</span>
           </Link>
-          <Link
-            href="/hangman"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            Jogo da Forca
-          </Link>
-        </nav>
+          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+            <Link href="/#projetos" className="transition-colors hover:text-primary">
+              Projetos
+            </Link>
+            <Link href="/#sobre" className="transition-colors hover:text-primary">
+              Sobre Mim
+            </Link>
+            <Link href="/#habilidades" className="transition-colors hover:text-primary">
+              Habilidades
+            </Link>
+            <Link href="/#contato" className="transition-colors hover:text-primary">
+              Contato
+            </Link>
+          </nav>
+        </div>
+        <div className="flex flex-1 items-center justify-end">
+          <Button asChild>
+            <Link href="/hangman">Jogo da Forca</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );

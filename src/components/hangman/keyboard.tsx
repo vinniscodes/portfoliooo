@@ -16,7 +16,7 @@ export function Keyboard({
   disabled = false,
 }: KeyboardProps) {
   return (
-    <div className="grid grid-cols-5 gap-2 sm:grid-cols-7 md:grid-cols-9 lg:grid-cols-13">
+    <div className="grid grid-cols-7 gap-2 md:grid-cols-9">
       {KEYS.map((key) => {
         const isActive = activeLetters.includes(key);
         const isInactive = inactiveLetters.includes(key);
@@ -25,7 +25,7 @@ export function Keyboard({
             key={key}
             size="sm"
             variant={isActive ? 'default' : isInactive ? 'destructive' : 'outline'}
-            className="aspect-square p-2 text-lg font-bold sm:text-xl"
+            className="aspect-square p-2 text-lg font-bold"
             onClick={() => onSelectLetter(key)}
             disabled={isActive || isInactive || disabled}
           >
