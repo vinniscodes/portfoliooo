@@ -5,15 +5,6 @@ import { getRandomWord } from '@/lib/words';
 import { HangmanDrawing } from '@/components/hangman/hangman-drawing';
 import { WordDisplay } from '@/components/hangman/word-display';
 import { Keyboard } from '@/components/hangman/keyboard';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from '@/components/ui/alert-dialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -52,13 +43,12 @@ export default function HangmanPage() {
 
   const addGuessedLetter = useCallback(
     (letter: string) => {
-      if (guessedLetters.includes(letter) || isWinner || isLoser) return;
-
+      if (gameStatus !== 'playing' || guessedLetters.includes(letter)) return;
       setGuessedLetters((currentLetters) => [...currentLetters, letter]);
     },
-    [guessedLetters, isWinner, isLoser]
+    [guessedLetters, gameStatus]
   );
-
+  
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const key = e.key.toUpperCase();
@@ -74,6 +64,7 @@ export default function HangmanPage() {
     };
   }, [addGuessedLetter]);
 
+
   return (
     <div className="container mx-auto flex max-w-3xl flex-col items-center gap-8 p-4 py-12">
       <Card className="w-full">
@@ -86,28 +77,28 @@ export default function HangmanPage() {
 
           {wordToGuess && <WordDisplay word={wordToGuess} guessedLetters={guessedLetters} reveal={isLoser} />}
 
-          <div className="w-full self-stretch pt-4">
-            <Keyboard
-              activeLetters={guessedLetters.filter((letter) => wordToGuess.includes(letter))}
-              inactiveLetters={incorrectLetters}
-              onSelectLetter={addGuessedLetter}
-              disabled={isWinner || isLoser}
-            />
-          </div>
+          {(isWinner || isLoser) ? (
+            <div className="flex flex-col items-center gap-4 text-center">
+              <h2 className="text-2xl font-bold">
+                {isWinner ? '🎉 Você Venceu! 🎉' : '😥 Você Perdeu! 😥'}
+              </h2>
+              <p className="text-muted-foreground">
+                A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
+              </p>
+              <Button onClick={startNewGame}>Jogar Novamente</Button>
+            </div>
+          ) : (
+            <div className="w-full self-stretch pt-4">
+              <Keyboard
+                activeLetters={guessedLetters.filter((letter) => wordToGuess.includes(letter))}
+                inactiveLetters={incorrectLetters}
+                onSelectLetter={addGuessedLetter}
+                disabled={gameStatus !== 'playing'}
+              />
+            </div>
+          )}
         </CardContent>
       </Card>
-      
-      {(isWinner || isLoser) && (
-        <div className="flex flex-col items-center gap-4 rounded-lg bg-card p-6 text-center shadow-lg">
-           <h2 className="text-2xl font-bold">
-            {isWinner ? '🎉 Você Venceu! 🎉' : '😥 Você Perdeu! 😥'}
-          </h2>
-          <p className="text-muted-foreground">
-            A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
-          </p>
-          <Button onClick={startNewGame}>Jogar Novamente</Button>
-        </div>
-      )}
     </div>
   );
 }

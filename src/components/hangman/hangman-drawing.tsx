@@ -1,45 +1,95 @@
 const HEAD = (
   <div
     key="head"
-    className="absolute top-[50px] right-[-30px] h-[70px] w-[70px] rounded-full border-8 border-foreground"
+    style={{
+      position: 'absolute',
+      top: '50px',
+      right: '-30px',
+      width: '70px',
+      height: '70px',
+      borderRadius: '50%',
+      border: '8px solid hsl(var(--foreground))',
+    }}
   />
 );
 
 const BODY = (
   <div
     key="body"
-    className="absolute top-[120px] right-0 h-[100px] w-2 bg-foreground"
+    style={{
+      position: 'absolute',
+      top: '112px',
+      right: '0px',
+      width: '8px',
+      height: '100px',
+      background: 'hsl(var(--foreground))',
+    }}
   />
 );
 
 const RIGHT_ARM = (
   <div
     key="right-arm"
-    className="absolute top-[150px] right-[-90px] h-2 w-[90px] -rotate-45 transform bg-foreground"
+    style={{
+      position: 'absolute',
+      top: '140px',
+      right: '-80px',
+      width: '80px',
+      height: '8px',
+      background: 'hsl(var(--foreground))',
+      transform: 'rotate(-30deg)',
+      transformOrigin: 'left bottom',
+    }}
   />
 );
 
 const LEFT_ARM = (
   <div
     key="left-arm"
-    className="absolute top-[150px] right-0 h-2 w-[90px] rotate-45 transform bg-foreground"
+    style={{
+      position: 'absolute',
+      top: '140px',
+      right: '8px',
+      width: '80px',
+      height: '8px',
+      background: 'hsl(var(--foreground))',
+      transform: 'rotate(30deg)',
+      transformOrigin: 'right bottom',
+    }}
   />
 );
 
 const RIGHT_LEG = (
   <div
     key="right-leg"
-    className="absolute top-[210px] right-[-80px] h-2 w-[100px] rotate-60 transform bg-foreground"
+    style={{
+      position: 'absolute',
+      top: '204px',
+      right: '-72px',
+      width: '80px',
+      height: '8px',
+      background: 'hsl(var(--foreground))',
+      transform: 'rotate(60deg)',
+      transformOrigin: 'left top',
+    }}
   />
 );
 
 const LEFT_LEG = (
   <div
     key="left-leg"
-    className="absolute top-[210px] right-[-10px] h-2 w-[100px] -rotate-60 transform bg-foreground"
+    style={{
+      position: 'absolute',
+      top: '204px',
+      right: '0px',
+      width: '80px',
+      height: '8px',
+      background: 'hsl(var(--foreground))',
+      transform: 'rotate(-60deg)',
+      transformOrigin: 'right top',
+    }}
   />
 );
-
 
 const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
 
@@ -49,18 +99,35 @@ type HangmanDrawingProps = {
 
 export function HangmanDrawing({ numberOfMistakes }: HangmanDrawingProps) {
   return (
-    <div className="relative h-64">
+    <div style={{ position: 'relative', height: '280px', width: '250px' }}>
       {BODY_PARTS.slice(0, numberOfMistakes)}
       <div
-        className="absolute top-0 right-0 h-[50px] w-2 bg-foreground"
+        style={{
+          height: '50px',
+          width: '8px',
+          background: 'hsl(var(--foreground))',
+          position: 'absolute',
+          top: 0,
+          right: 0,
+        }}
       />
       <div
-        className="ml-[100px] h-2 w-[200px] bg-foreground"
+        style={{
+          height: '8px',
+          width: '200px',
+          background: 'hsl(var(--foreground))',
+          marginLeft: '82px',
+        }}
       />
       <div
-        className="ml-[100px] h-[300px] w-2 bg-foreground"
+        style={{
+          height: '280px',
+          width: '8px',
+          background: 'hsl(var(--foreground))',
+          marginLeft: '82px',
+        }}
       />
-      <div className="h-2 w-[250px] bg-foreground" />
+      <div style={{ height: '8px', width: '250px', background: 'hsl(var(--foreground))' }} />
     </div>
   );
 }
