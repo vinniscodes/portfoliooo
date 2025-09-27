@@ -14,6 +14,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const MAX_MISTAKES = 6;
 
@@ -73,38 +75,39 @@ export default function HangmanPage() {
   }, [addGuessedLetter]);
 
   return (
-    <div className="container mx-auto flex max-w-2xl flex-col items-center gap-8 p-4 py-12">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight">Jogo da Forca</h1>
-        <p className="text-muted-foreground">Adivinhe a palavra secreta para vencer.</p>
-      </div>
+    <div className="container mx-auto flex max-w-3xl flex-col items-center gap-8 p-4 py-12">
+      <Card className="w-full">
+        <CardHeader className="items-center text-center">
+          <CardTitle className="text-3xl font-bold tracking-tight">Jogo da Forca</CardTitle>
+          <CardDescription>Adivinhe a palavra secreta para vencer.</CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-col items-center gap-8">
+          <HangmanDrawing numberOfMistakes={incorrectLetters.length} />
 
-      <HangmanDrawing numberOfMistakes={incorrectLetters.length} />
+          {wordToGuess && <WordDisplay word={wordToGuess} guessedLetters={guessedLetters} reveal={isLoser} />}
 
-      {wordToGuess && <WordDisplay word={wordToGuess} guessedLetters={guessedLetters} reveal={isLoser} />}
-
-      <div className="w-full self-stretch pt-4">
-        <Keyboard
-          activeLetters={guessedLetters.filter((letter) => wordToGuess.includes(letter))}
-          inactiveLetters={incorrectLetters}
-          onSelectLetter={addGuessedLetter}
-          disabled={isWinner || isLoser}
-        />
-      </div>
-
-      <AlertDialog open={gameStatus !== 'playing'}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{gameStatus === 'won' ? 'Você Venceu!' : 'Você Perdeu!'}</AlertDialogTitle>
-            <AlertDialogDescription>
-              {gameStatus === 'lost' && `Você cometeu muitos erros. `}A palavra correta era: <span className="font-bold text-foreground">{wordToGuess}</span>
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogAction onClick={startNewGame}>Jogar Novamente</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+          <div className="w-full self-stretch pt-4">
+            <Keyboard
+              activeLetters={guessedLetters.filter((letter) => wordToGuess.includes(letter))}
+              inactiveLetters={incorrectLetters}
+              onSelectLetter={addGuessedLetter}
+              disabled={isWinner || isLoser}
+            />
+          </div>
+        </CardContent>
+      </Card>
+      
+      {(isWinner || isLoser) && (
+        <div className="flex flex-col items-center gap-4 rounded-lg bg-card p-6 text-center shadow-lg">
+           <h2 className="text-2xl font-bold">
+            {isWinner ? '🎉 Você Venceu! 🎉' : '😥 Você Perdeu! 😥'}
+          </h2>
+          <p className="text-muted-foreground">
+            A palavra era: <span className="font-bold text-foreground">{wordToGuess}</span>
+          </p>
+          <Button onClick={startNewGame}>Jogar Novamente</Button>
+        </div>
+      )}
     </div>
   );
 }
