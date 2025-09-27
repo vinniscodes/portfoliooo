@@ -14,7 +14,7 @@ const projects = [
       'Controle de despesas e receitas',
     ],
     technologies: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
-    link: 'https://github.com/vinniscodes',
+    link: 'https://github.com/vinniscodes/MyHostVinni',
   },
   {
     title: 'Previsor de Preços de Pizza',
@@ -26,7 +26,7 @@ const projects = [
       'Visualização de predições',
     ],
     technologies: ['Python', 'Streamlit', 'Pandas', 'Scikit-learn'],
-    link: 'https://github.com/vinniscodes',
+    link: 'https://github.com/vinniscodes/streamlit-pizza-predictor',
   },
   {
     title: 'VinnisCodes - Plataforma de Estudos',
@@ -38,7 +38,7 @@ const projects = [
       'Persistência de dados local',
     ],
     technologies: ['HTML5', 'CSS3', 'JavaScript'],
-    link: 'https://github.com/vinniscodes',
+    link: 'https://github.com/vinniscodes/Diario-de-aprendizado',
   },
 ];
 
