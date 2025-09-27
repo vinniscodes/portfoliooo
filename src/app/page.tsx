@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, GitMerge, Server, Github, Linkedin, Code } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const projects = [
   {
@@ -55,7 +56,11 @@ export default function Home() {
   return (
     <div className="flex animate-fade-in flex-col">
       <section id="hero" className="container mx-auto flex min-h-screen flex-col items-center justify-center gap-4 text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Olá, eu sou Vinicius Anderson</h1>
+        <Avatar className="h-32 w-32">
+          <AvatarImage src="https://picsum.photos/seed/vini/200/200" alt="Vinicius Anderson" data-ai-hint="man portrait" />
+          <AvatarFallback>VA</AvatarFallback>
+        </Avatar>
+        <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">Olá, eu sou Vinicius Anderson</h1>
         <p className="text-lg text-primary sm:text-xl">Desenvolvedor Web | Apaixonado por Tecnologia</p>
         <div className="mt-4 flex gap-4">
           <Button asChild size="lg">
