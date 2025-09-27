@@ -1,73 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, GitMerge, Server, Github, Linkedin } from 'lucide-react';
-
-const ReactIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 2.69l5.66 9.83-11.32 0z" />
-      <circle cx="12" cy="12" r="2.4" />
-      <path d="M4.93 16.5l14.14-8.16" />
-      <path d="M19.07 16.5l-14.14-8.16" />
-    </svg>
-  );
-  
-  const NextjsIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M9 15V9l6 6V9" />
-    </svg>
-  );
-  
-  const TypescriptIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M4 11l8-8 8 8" />
-      <path d="M4 21v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4" />
-      <rect x="7" y="11" width="10" height="10" />
-    </svg>
-  );
-  
-  
-  const TailwindIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 12c-3.333-3.333-6.667 0-10 0s3.333 3.333 0 6.667C5.333 22 8.667 18.667 12 12zm0 0c3.333-3.333 6.667 0 10 0s-3.333 3.333 0 6.667C18.667 22 15.333 18.667 12 12zm0 0c-3.333 3.333-6.667 0-10 0s3.333-3.333 0-6.667C5.333 2 8.667 5.333 12 12zm0 0c3.333 3.333 6.667 0 10 0s-3.333-3.333 0-6.667C18.667 2 15.333 5.333 12 12z" />
-    </svg>
-  );
+import { ExternalLink, GitMerge, Server, Github, Linkedin, Code } from 'lucide-react';
 
 const projects = [
   {
@@ -109,10 +43,10 @@ const projects = [
 ];
 
 const skills = [
-  { name: 'React', icon: <ReactIcon className="h-8 w-8" /> },
-  { name: 'Next.js', icon: <NextjsIcon className="h-8 w-8" /> },
-  { name: 'TypeScript', icon: <TypescriptIcon className="h-8 w-8" /> },
-  { name: 'Tailwind CSS', icon: <TailwindIcon className="h-8 w-8" /> },
+  { name: 'React', icon: <Code className="h-8 w-8" /> },
+  { name: 'Next.js', icon: <Code className="h-8 w-8" /> },
+  { name: 'TypeScript', icon: <Code className="h-8 w-8" /> },
+  { name: 'Tailwind CSS', icon: <Code className="h-8 w-8" /> },
   { name: 'Node.js', icon: <Server className="h-8 w-8" /> },
   { name: 'Git', icon: <GitMerge className="h-8 w-8" /> },
 ];
@@ -193,15 +127,15 @@ export default function Home() {
           Gostou do meu trabalho? Vamos conversar!
         </p>
         <div className="mt-6">
-           <a href="mailto:v.anderson.dev@gmail.com" className="text-xl text-primary hover:underline">
-            v.anderson.dev@gmail.com
+           <a href="mailto:viniciusanderson.mycode@gmail.com" className="text-xl text-primary hover:underline">
+            viniciusanderson.mycode@gmail.com
           </a>
         </div>
         <div className="mt-8 flex justify-center gap-6">
            <a href="https://github.com/vinniscodes" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <Github className="h-8 w-8 text-muted-foreground transition-colors hover:text-primary" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/viniciusanderson/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Linkedin className="h-8 w-8 text-muted-foreground transition-colors hover:text-primary" />
           </a>
         </div>
