@@ -73,10 +73,10 @@ export default function HangmanPage() {
   }, [addGuessedLetter]);
 
   return (
-    <div className="container mx-auto flex max-w-2xl flex-col items-center gap-8 p-4 py-12 font-mono">
+    <div className="container mx-auto flex max-w-2xl flex-col items-center gap-8 p-4 py-12">
       <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-primary">TERMINAL DE CRIPTOGRAFIA</h1>
-        <p className="text-muted-foreground">Decifre a palavra-chave para obter acesso.</p>
+        <h1 className="text-4xl font-bold tracking-tight">Jogo da Forca</h1>
+        <p className="text-muted-foreground">Adivinhe a palavra secreta para vencer.</p>
       </div>
 
       <HangmanDrawing numberOfMistakes={incorrectLetters.length} />
@@ -93,15 +93,15 @@ export default function HangmanPage() {
       </div>
 
       <AlertDialog open={gameStatus !== 'playing'}>
-        <AlertDialogContent className="font-mono">
+        <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{gameStatus === 'won' ? '>> ACESSO CONCEDIDO <<' : '>> ACESSO NEGADO <<'}</AlertDialogTitle>
+            <AlertDialogTitle>{gameStatus === 'won' ? 'Você Venceu!' : 'Você Perdeu!'}</AlertDialogTitle>
             <AlertDialogDescription>
-              {gameStatus === 'lost' && `Falha na autenticação. Tentativas excedidas. `}A palavra-chave era: <span className="font-bold text-primary">{wordToGuess}</span>
+              {gameStatus === 'lost' && `Você cometeu muitos erros. `}A palavra correta era: <span className="font-bold text-foreground">{wordToGuess}</span>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogAction onClick={startNewGame}>REINICIAR PROTOCOLO</AlertDialogAction>
+            <AlertDialogAction onClick={startNewGame}>Jogar Novamente</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
